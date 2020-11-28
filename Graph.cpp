@@ -837,17 +837,19 @@ void Graph::peel(int k, int cur) {
 
 void Graph::output_ds() {
 //    printf("S:\n");
-    printf("s %lu, t %lu\n", S.size(), T.size());
-    FILE* dsFile = fopen("fraud-users-di.txt", "w");
+    FILE* dsFile = fopen("ds.txt", "w");
+    fprintf(dsFile, "s %lu, t %lu\n", S.size(), T.size());
+    fprintf(dsFile, "S:\n");
     for (auto u : S){
         fprintf(dsFile, "%d\n", u);
     }
-    fclose(dsFile);
 
-//    printf("\nT:\n");
-//    for (auto u : T){
-//        printf("%d\n", u);
-//    }
+    fprintf(dsFile, "T:\n");
+    for (auto u : T){
+        fprintf(dsFile, "%d\n", u);
+    }
+
+    fclose(dsFile);
 
 }
 
