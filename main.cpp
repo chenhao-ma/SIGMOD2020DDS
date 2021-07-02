@@ -25,16 +25,14 @@ int main(int argc, char *argv[]) {
         } else {
             if (args->parameterized) {
                 printf("density %.2f\n", g.approx_para_ds(args->delta, args->epsilon));
-            }
-            if (args->icalp) {
+            } else if (args->icalp) {
                 printf("density %.2f\n", g.approx_icalp_ds());
-            }
-            if (args->baseline) {
-                printf("density %.2f\n", g.approx_core_ds());
-            }
-            if (args->ficalp) {
+            } else if (args->ficalp) {
                 printf("density %.2f\n", g.approx_ficalp_ds());
-            }
+            } else {
+		printf("density %.2f\n", g.approx_core_ds());
+	    }
+
         }
     }
 
