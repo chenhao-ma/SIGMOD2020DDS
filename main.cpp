@@ -39,9 +39,8 @@ int main(int argc, char *argv[]) {
     clock_t end = clock();
     double io_secs = double(io_end - begin) / CLOCKS_PER_SEC;
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    printf("io time: %.4f, total time: %.4f\n", io_secs, elapsed_secs);
-
     g.output_ds();
+    printf("io time: %.4f, total time: %.4f\n", io_secs, elapsed_secs);
 
     return 0;
 }
