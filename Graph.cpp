@@ -265,14 +265,20 @@ double Graph::gen_alpha_beta_core(int alpha, int beta) {
 
     int edge_num = 0;
     int s = n - i, t = n - j;
+    S.clear();
+    T.clear();
     for (; i < n; i++) {
         int u = vert[0][i];
+        S.push_back(u);
         for (auto v : adj[0][u]) {
             if (deg[1][v] >= beta) {
+                T.push_back(v);
                 ++edge_num;
             }
         }
     }
+    sort( T.begin(), T.end() );
+    T.erase( unique( T.begin(), T.end() ), T.end() );
     printf("s %d, t %d, e %d\n", s, t, edge_num);
     return edge_num / sqrt(s * t);
 }
