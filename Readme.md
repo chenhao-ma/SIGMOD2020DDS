@@ -11,6 +11,12 @@ Packages/Libraries Needed: `Boost 1.66.0`, `CMake 2.8`, `makefile`
 All datasets used in our experiments are from the [KONECT](http://konect.uni-koblenz.de "KONECT") website. But, it seems the website is no longer available. Thus, we summarise all the datasets used into a zip file. 
 Repository: [datasets](https://drive.google.com/file/d/184NwGPLhWjozCNKMM_OcNGGEk50iQalr/view?usp=sharing "datasets")
 
+[gdown](https://github.com/wkentaro/gdown) is a helpful tool to download a large file from Google Drive. Below is the command to install gdown and download the datasets from Google Drive.
+```
+pip install gdown
+gdown --id 184NwGPLhWjozCNKMM_OcNGGEk50iQalr
+```
+
 ## Hardware Info
 Here you should include any details and comments about the used hardware in order to be able to accommodate the reproducibility effort. Any information about non-standard hardware should also be included. You should also include at least the following info:
 - Processor: 2  `Intel(R) Xeon(R) Silver 4110 CPU @ 2.10GHz` processors
